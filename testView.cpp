@@ -1,10 +1,10 @@
 
-// testView.cpp : CtestView ÀàµÄÊµÏÖ
+// testView.cpp : CtestView ç±»çš„å®ç°
 //
 
 #include "stdafx.h"
-// SHARED_HANDLERS ¿ÉÒÔÔÚÊµÏÖÔ¤ÀÀ¡¢ËõÂÔÍ¼ºÍËÑË÷É¸Ñ¡Æ÷¾ä±úµÄ
-// ATL ÏîÄ¿ÖĞ½øĞĞ¶¨Òå£¬²¢ÔÊĞíÓë¸ÃÏîÄ¿¹²ÏíÎÄµµ´úÂë¡£
+// SHARED_HANDLERS å¯ä»¥åœ¨å®ç°é¢„è§ˆã€ç¼©ç•¥å›¾å’Œæœç´¢ç­›é€‰å™¨å¥æŸ„çš„
+// ATL é¡¹ç›®ä¸­è¿›è¡Œå®šä¹‰ï¼Œå¹¶å…è®¸ä¸è¯¥é¡¹ç›®å…±äº«æ–‡æ¡£ä»£ç ã€‚
 #ifndef SHARED_HANDLERS
 #include "test.h"
 #endif
@@ -15,14 +15,14 @@
 #define new DEBUG_NEW
 #endif
 
-#define Round(d) int(floor(d+0.5))//ËÄÉáÎåÈëºê¶¨Òå
+#define Round(d) int(floor(d+0.5))//å››èˆäº”å…¥å®å®šä¹‰
 
 // CtestView
 
 IMPLEMENT_DYNCREATE(CtestView, CView)
 
 BEGIN_MESSAGE_MAP(CtestView, CView)
-	// ±ê×¼´òÓ¡ÃüÁî
+	// æ ‡å‡†æ‰“å°å‘½ä»¤
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CtestView::OnFilePrintPreview)
@@ -32,11 +32,11 @@ BEGIN_MESSAGE_MAP(CtestView, CView)
 	ON_WM_LBUTTONUP()
 END_MESSAGE_MAP()
 
-// CtestView ¹¹Ôì/Îö¹¹
+// CtestView æ„é€ /ææ„
 
 CtestView::CtestView()
 {
-	// TODO: ÔÚ´Ë´¦Ìí¼Ó¹¹Ôì´úÂë
+	// TODO: åœ¨æ­¤å¤„æ·»åŠ æ„é€ ä»£ç 
 
 }
 
@@ -46,13 +46,13 @@ CtestView::~CtestView()
 
 BOOL CtestView::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: ÔÚ´Ë´¦Í¨¹ıĞŞ¸Ä
-	//  CREATESTRUCT cs À´ĞŞ¸Ä´°¿ÚÀà»òÑùÊ½
+	// TODO: åœ¨æ­¤å¤„é€šè¿‡ä¿®æ”¹
+	//  CREATESTRUCT cs æ¥ä¿®æ”¹çª—å£ç±»æˆ–æ ·å¼
 
 	return CView::PreCreateWindow(cs);
 }
 
-// CtestView »æÖÆ
+// CtestView ç»˜åˆ¶
 
 void CtestView::OnDraw(CDC* /*pDC*/)
 {
@@ -61,12 +61,12 @@ void CtestView::OnDraw(CDC* /*pDC*/)
 	if (!pDoc)
 		return;
 	
-	// TODO: ÔÚ´Ë´¦Îª±¾»úÊı¾İÌí¼Ó»æÖÆ´úÂë
+	// TODO: åœ¨æ­¤å¤„ä¸ºæœ¬æœºæ•°æ®æ·»åŠ ç»˜åˆ¶ä»£ç 
 	GetClientRect(&rect);
 }
 
 
-// CtestView ´òÓ¡
+// CtestView æ‰“å°
 
 
 void CtestView::OnFilePrintPreview()
@@ -78,18 +78,18 @@ void CtestView::OnFilePrintPreview()
 
 BOOL CtestView::OnPreparePrinting(CPrintInfo* pInfo)
 {
-	// Ä¬ÈÏ×¼±¸
+	// é»˜è®¤å‡†å¤‡
 	return DoPreparePrinting(pInfo);
 }
 
 void CtestView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: Ìí¼Ó¶îÍâµÄ´òÓ¡Ç°½øĞĞµÄ³õÊ¼»¯¹ı³Ì
+	// TODO: æ·»åŠ é¢å¤–çš„æ‰“å°å‰è¿›è¡Œçš„åˆå§‹åŒ–è¿‡ç¨‹
 }
 
 void CtestView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: Ìí¼Ó´òÓ¡ºó½øĞĞµÄÇåÀí¹ı³Ì
+	// TODO: æ·»åŠ æ‰“å°åè¿›è¡Œçš„æ¸…ç†è¿‡ç¨‹
 }
 
 void CtestView::OnRButtonUp(UINT /* nFlags */, CPoint point)
@@ -106,7 +106,7 @@ void CtestView::OnContextMenu(CWnd* /* pWnd */, CPoint point)
 }
 
 
-// CtestView Õï¶Ï
+// CtestView è¯Šæ–­
 
 #ifdef _DEBUG
 void CtestView::AssertValid() const
@@ -119,7 +119,7 @@ void CtestView::Dump(CDumpContext& dc) const
 	CView::Dump(dc);
 }
 
-CtestDoc* CtestView::GetDocument() const // ·Çµ÷ÊÔ°æ±¾ÊÇÄÚÁªµÄ
+CtestDoc* CtestView::GetDocument() const // éè°ƒè¯•ç‰ˆæœ¬æ˜¯å†…è”çš„
 {
 	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CtestDoc)));
 	return (CtestDoc*)m_pDocument;
@@ -127,14 +127,14 @@ CtestDoc* CtestView::GetDocument() const // ·Çµ÷ÊÔ°æ±¾ÊÇÄÚÁªµÄ
 #endif //_DEBUG
 
 
-// CtestView ÏûÏ¢´¦Àí³ÌĞò
+// CtestView æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 
 void CtestView::OnLButtonDown(UINT nFlags, CPoint point)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÏûÏ¢´¦Àí³ÌĞò´úÂëºÍ/»òµ÷ÓÃÄ¬ÈÏÖµ
+	// TODO: åœ¨æ­¤æ·»åŠ æ¶ˆæ¯å¤„ç†ç¨‹åºä»£ç å’Œ/æˆ–è°ƒç”¨é»˜è®¤å€¼
 
-	                                               //½«×ø±êÖµÒÔÆÁÄ»ÖĞĞÄ×÷ÎªÔ­µãÏÔÊ¾×ø±êÖµ
+	                                               //å°†åæ ‡å€¼ä»¥å±å¹•ä¸­å¿ƒä½œä¸ºåŸç‚¹æ˜¾ç¤ºåæ ‡å€¼
 	P0.x=point.x-rect.Width()/2;
 	P0.y=rect.Height()/2-point.y;
 
@@ -142,11 +142,14 @@ void CtestView::OnLButtonDown(UINT nFlags, CPoint point)
 }
 
 
+/******************************************************************************************/
+/*******************************ç›´çº¿ç®—æ³•å®ç°************************************************/
+/******************************************************************************************/
 void CtestView::OnLButtonUp(UINT nFlags, CPoint point)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÏûÏ¢´¦Àí³ÌĞò´úÂëºÍ/»òµ÷ÓÃÄ¬ÈÏÖµ
+	// TODO: åœ¨æ­¤æ·»åŠ æ¶ˆæ¯å¤„ç†ç¨‹åºä»£ç å’Œ/æˆ–è°ƒç”¨é»˜è®¤å€¼
 		   
-		                                           //×ª»»×ø±êÏµ£¬ÉèÖÃÆÁÄ»ÖĞĞÄÎªÔ­µã
+		                                           //è½¬æ¢åæ ‡ç³»ï¼Œè®¾ç½®å±å¹•ä¸­å¿ƒä¸ºåŸç‚¹
 		   CDC* pDC=GetDC();
 		   pDC->SetMapMode(MM_ANISOTROPIC);
 		   pDC->SetWindowExt(rect.Width(),rect.Height());
@@ -159,12 +162,12 @@ void CtestView::OnLButtonUp(UINT nFlags, CPoint point)
 
 
 		 double k,d;
-		 CP2 p1;                                    //ÉùÃ÷p1×ø±ê
-		 CP2 p, t;                                  //ÉùÃ÷p,t×ø±ê
+		 CP2 p1;                                    //å£°æ˜p1åæ ‡
+		 CP2 p, t;                                  //å£°æ˜p,tåæ ‡
 		 
 
 		 COLORREF clr = RGB(0, 0, 0);                  
-		 if (fabs(P0.x - P1.x) < 1e-6)                //»­´¹Ïß
+		 if (fabs(P0.x - P1.x) < 1e-6)                //ç”»å‚çº¿
 		 {
 			 if (P0.y > P1.y)
 			 {
@@ -178,7 +181,7 @@ void CtestView::OnLButtonUp(UINT nFlags, CPoint point)
 		 else
 		 {			 
 			k=(P1.y-P0.y)/(P1.x-P0.x);              
-				if (k > 1.0)                       //»­Ğ±ÂÊk>1µÄÖ±Ïß
+				if (k > 1.0)                       //ç”»æ–œç‡k>1çš„ç›´çº¿
 				{
 					if (P0.y > P1.y)
 					{
@@ -198,7 +201,7 @@ void CtestView::OnLButtonUp(UINT nFlags, CPoint point)
 					}
 				}
 
-			if (0.0<=k&&k<=1.0)                     //»­Ğ±ÂÊ0<=k<=1µÄÖ±Ïß
+			if (0.0<=k&&k<=1.0)                     //ç”»æ–œç‡0<=k<=1çš„ç›´çº¿
 			{
 				if (P0.x > P1.x)
 				{
@@ -218,7 +221,7 @@ void CtestView::OnLButtonUp(UINT nFlags, CPoint point)
 				}
 			}
 
-			if (k>=-1.0&&k<0.0)                    //»­-1<=k<0.0µÄÖ±Ïß
+			if (k>=-1.0&&k<0.0)                    //ç”»-1<=k<0.0çš„ç›´çº¿
 			{
 				if (P0.x > P1.x)
 				{
@@ -238,7 +241,7 @@ void CtestView::OnLButtonUp(UINT nFlags, CPoint point)
 				}
 			}
 
-			if (k<-1.0)                         //»­Ğ±ÂÊk<-1.0µÄÖ±Ïß
+			if (k<-1.0)                         //ç”»æ–œç‡k<-1.0çš„ç›´çº¿
 			{
 				if (P0.y < P1.y)
 				{
