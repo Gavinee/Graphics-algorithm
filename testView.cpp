@@ -1,10 +1,10 @@
 
-// testView.cpp : CtestView Á±ªÁöÑÂÆûÁé∞
+// testView.cpp : CtestView ¿‡µƒ µœ÷
 //
 
 #include "stdafx.h"
-// SHARED_HANDLERS ÂèØ‰ª•Âú®ÂÆûÁé∞È¢ÑËßà„ÄÅÁº©Áï•ÂõæÂíåÊêúÁ¥¢Á≠õÈÄâÂô®Âè•ÊüÑÁöÑ
-// ATL È°πÁõÆ‰∏≠ËøõË°åÂÆö‰πâÔºåÂπ∂ÂÖÅËÆ∏‰∏éËØ•È°πÁõÆÂÖ±‰∫´ÊñáÊ°£‰ª£Á†Å„ÄÇ
+// SHARED_HANDLERS ø…“‘‘⁄ µœ÷‘§¿¿°¢Àı¬‘Õº∫ÕÀ—À˜…∏—°∆˜æ‰±˙µƒ
+// ATL œÓƒø÷–Ω¯––∂®“Â£¨≤¢‘ –Ì”Î∏√œÓƒøπ≤œÌŒƒµµ¥˙¬Î°£
 #ifndef SHARED_HANDLERS
 #include "test.h"
 #endif
@@ -15,14 +15,14 @@
 #define new DEBUG_NEW
 #endif
 
-#define Round(d) int(floor(d+0.5))//ÂõõËàç‰∫îÂÖ•ÂÆèÂÆö‰πâ
+#define Round(d) int(floor(d+0.5))//Àƒ…·ŒÂ»Î∫Í∂®“Â
 
 // CtestView
 
 IMPLEMENT_DYNCREATE(CtestView, CView)
 
 BEGIN_MESSAGE_MAP(CtestView, CView)
-	// Ê†áÂáÜÊâìÂç∞ÂëΩ‰ª§
+	// ±Í◊º¥Ú”°√¸¡Ó
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CtestView::OnFilePrintPreview)
@@ -32,11 +32,11 @@ BEGIN_MESSAGE_MAP(CtestView, CView)
 	ON_WM_LBUTTONUP()
 END_MESSAGE_MAP()
 
-// CtestView ÊûÑÈÄ†/ÊûêÊûÑ
+// CtestView ππ‘Ï/Œˆππ
 
 CtestView::CtestView()
 {
-	// TODO: Âú®Ê≠§Â§ÑÊ∑ªÂä†ÊûÑÈÄ†‰ª£Á†Å
+	// TODO: ‘⁄¥À¥¶ÃÌº”ππ‘Ï¥˙¬Î
 
 }
 
@@ -46,13 +46,13 @@ CtestView::~CtestView()
 
 BOOL CtestView::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: Âú®Ê≠§Â§ÑÈÄöËøá‰øÆÊîπ
-	//  CREATESTRUCT cs Êù•‰øÆÊîπÁ™óÂè£Á±ªÊàñÊ†∑Âºè
+	// TODO: ‘⁄¥À¥¶Õ®π˝–ﬁ∏ƒ
+	//  CREATESTRUCT cs ¿¥–ﬁ∏ƒ¥∞ø⁄¿‡ªÚ—˘ Ω
 
 	return CView::PreCreateWindow(cs);
 }
 
-// CtestView ÁªòÂà∂
+// CtestView ªÊ÷∆
 
 void CtestView::OnDraw(CDC* /*pDC*/)
 {
@@ -61,12 +61,12 @@ void CtestView::OnDraw(CDC* /*pDC*/)
 	if (!pDoc)
 		return;
 	
-	// TODO: Âú®Ê≠§Â§Ñ‰∏∫Êú¨Êú∫Êï∞ÊçÆÊ∑ªÂä†ÁªòÂà∂‰ª£Á†Å
+	// TODO: ‘⁄¥À¥¶Œ™±æª˙ ˝æ›ÃÌº”ªÊ÷∆¥˙¬Î
 	GetClientRect(&rect);
 }
 
 
-// CtestView ÊâìÂç∞
+// CtestView ¥Ú”°
 
 
 void CtestView::OnFilePrintPreview()
@@ -78,18 +78,18 @@ void CtestView::OnFilePrintPreview()
 
 BOOL CtestView::OnPreparePrinting(CPrintInfo* pInfo)
 {
-	// ÈªòËÆ§ÂáÜÂ§á
+	// ƒ¨»œ◊º±∏
 	return DoPreparePrinting(pInfo);
 }
 
 void CtestView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: Ê∑ªÂä†È¢ùÂ§ñÁöÑÊâìÂç∞ÂâçËøõË°åÁöÑÂàùÂßãÂåñËøáÁ®ã
+	// TODO: ÃÌº”∂ÓÕ‚µƒ¥Ú”°«∞Ω¯––µƒ≥ı ºªØπ˝≥Ã
 }
 
 void CtestView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: Ê∑ªÂä†ÊâìÂç∞ÂêéËøõË°åÁöÑÊ∏ÖÁêÜËøáÁ®ã
+	// TODO: ÃÌº”¥Ú”°∫ÛΩ¯––µƒ«Â¿Ìπ˝≥Ã
 }
 
 void CtestView::OnRButtonUp(UINT /* nFlags */, CPoint point)
@@ -106,7 +106,7 @@ void CtestView::OnContextMenu(CWnd* /* pWnd */, CPoint point)
 }
 
 
-// CtestView ËØäÊñ≠
+// CtestView ’Ô∂œ
 
 #ifdef _DEBUG
 void CtestView::AssertValid() const
@@ -119,7 +119,7 @@ void CtestView::Dump(CDumpContext& dc) const
 	CView::Dump(dc);
 }
 
-CtestDoc* CtestView::GetDocument() const // ÈùûË∞ÉËØïÁâàÊú¨ÊòØÂÜÖËÅîÁöÑ
+CtestDoc* CtestView::GetDocument() const // ∑«µ˜ ‘∞Ê±æ «ƒ⁄¡™µƒ
 {
 	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CtestDoc)));
 	return (CtestDoc*)m_pDocument;
@@ -127,141 +127,174 @@ CtestDoc* CtestView::GetDocument() const // ÈùûË∞ÉËØïÁâàÊú¨ÊòØÂÜÖËÅîÁöÑ
 #endif //_DEBUG
 
 
-// CtestView Ê∂àÊÅØÂ§ÑÁêÜÁ®ãÂ∫è
+// CtestView œ˚œ¢¥¶¿Ì≥Ã–Ú
 
 
 void CtestView::OnLButtonDown(UINT nFlags, CPoint point)
 {
-	// TODO: Âú®Ê≠§Ê∑ªÂä†Ê∂àÊÅØÂ§ÑÁêÜÁ®ãÂ∫è‰ª£Á†ÅÂíå/ÊàñË∞ÉÁî®ÈªòËÆ§ÂÄº
-
-	                                               //Â∞ÜÂùêÊ†áÂÄº‰ª•Â±èÂπï‰∏≠ÂøÉ‰Ωú‰∏∫ÂéüÁÇπÊòæÁ§∫ÂùêÊ†áÂÄº
-	P0.x=point.x-rect.Width()/2;
+	// TODO: ‘⁄¥ÀÃÌº”œ˚œ¢¥¶¿Ì≥Ã–Ú¥˙¬Î∫Õ/ªÚµ˜”√ƒ¨»œ÷µ
+	P0.x=point.x-rect.Width()/2;;
 	P0.y=rect.Height()/2-point.y;
 
 	CView::OnLButtonDown(nFlags, point);
 }
 
 
-/******************************************************************************************/
-/*******************************Áõ¥Á∫øÁÆóÊ≥ïÂÆûÁé∞************************************************/
-/******************************************************************************************/
 void CtestView::OnLButtonUp(UINT nFlags, CPoint point)
 {
-	// TODO: Âú®Ê≠§Ê∑ªÂä†Ê∂àÊÅØÂ§ÑÁêÜÁ®ãÂ∫è‰ª£Á†ÅÂíå/ÊàñË∞ÉÁî®ÈªòËÆ§ÂÄº
-		   
-		                                           //ËΩ¨Êç¢ÂùêÊ†áÁ≥ªÔºåËÆæÁΩÆÂ±èÂπï‰∏≠ÂøÉ‰∏∫ÂéüÁÇπ
-		   CDC* pDC=GetDC();
-		   pDC->SetMapMode(MM_ANISOTROPIC);
-		   pDC->SetWindowExt(rect.Width(),rect.Height());
-		   pDC->SetViewportExt(rect.Width(),-rect.Height());
-		   pDC->SetViewportOrg(rect.Width()/2,rect.Height()/2);
-
-		 P1.x=point.x-rect.Width()/2;;
-		 P1.y=rect.Height()/2-point.y;
+	// TODO: ‘⁄¥ÀÃÌº”œ˚œ¢¥¶¿Ì≥Ã–Ú¥˙¬Î∫Õ/ªÚµ˜”√ƒ¨»œ÷µ
 
 
+	CDC* pDC = GetDC();
+	pDC->SetMapMode(MM_ANISOTROPIC);
+	pDC->SetWindowExt(rect.Width(), rect.Height());
+	pDC->SetViewportExt(rect.Width(), -rect.Height());
+	pDC->SetViewportOrg(rect.Width() / 2, rect.Height() / 2);
 
-		 double k,d;
-		 CP2 p1;                                    //Â£∞Êòép1ÂùêÊ†á
-		 CP2 p, t;                                  //Â£∞Êòép,tÂùêÊ†á
-		 
+	P1.x = point.x - rect.Width() / 2;;
+	P1.y = rect.Height() / 2 - point.y;
+	double k, d, len, t;
+	CP2 p;
+	COLORREF clr;
+	k = (P1.y - P0.y) / (P1.x - P0.x);
+	R0 = 255, G0 = 0, B0 = 0;
+	R1 = 0, G1 = 0, B1 = 255;
+	len = sqrt((P1.x - P0.x)*(P1.x - P0.x) + (P1.y - P0.y)*(P1.y - P0.y));
 
-		 COLORREF clr = RGB(0, 0, 0);                  
-		 if (fabs(P0.x - P1.x) < 1e-6)                //ÁîªÂûÇÁ∫ø
-		 {
-			 if (P0.y > P1.y)
-			 {
-				 t = P0; P0 = P1; P1 = t;
-			 }
-			 for (p = P0; p.y < P1.y; p.y++)
-			 {
-				 pDC->SetPixelV(Round(p.x), Round(p.y), clr);
-			 }
-		 }
-		 else
-		 {			 
-			k=(P1.y-P0.y)/(P1.x-P0.x);              
-				if (k > 1.0)                       //ÁîªÊñúÁéák>1ÁöÑÁõ¥Á∫ø
-				{
-					if (P0.y > P1.y)
-					{
-						t = P0; P0 = P1; P1 = t;
-					}
-					d = 1 - 0.5*k;
-					for (p = P0; p.y < P1.y; p.y++)
-					{
-						pDC->SetPixelV(Round(p.x), Round(p.y), clr);
-						if (d >= 0)
-						{
-							p.x++;
-							d += 1 - k;
-						}
-						else
-							d += 1;
-					}
-				}
-
-			if (0.0<=k&&k<=1.0)                     //ÁîªÊñúÁéá0<=k<=1ÁöÑÁõ¥Á∫ø
+	                                                   // ¥πœﬂ
+	if (fabs(P0.x - P1.x) < 1e-6)
+	{
+		if (P0.y > P1.y)
+		{
+			p = P0; P0 = P1; P1 = p;
+		}
+		for (p = P0; p.y < P1.y; p.y++)
+		{
+			pDC->SetPixelV(Round(p.x), Round(p.y), clr);
+		}
+	}
+	else
+	{
+		                                               //k > 1.0
+		k = (P1.y - P0.y) / (P1.x - P0.x);
+		if (k > 1.0)
+		{
+			if (P0.y > P1.y)
 			{
-				if (P0.x > P1.x)
+				p = P0; P0 = P1; P1 = p;
+			}
+			d = 1 - 0.5*k;
+			for (p = P0; p.y < P1.y; p.y++)
+			{
+				t = sqrt((p.x - P0.x)*(p.x - P0.x) + (p.y - P0.y)*(p.y - P0.y));
+				clr = RGB(R0*(1 - t / len) + R1*t / len, G0*(1 - t / len) + G1*t / len, B0*(1 - t / len) + B1*t / len);
+				pDC->SetPixelV(Round(p.x), Round(p.y), clr);
+				if (d >= 0)
 				{
-					t = P0; P0 = P1; P1 = t;
+					p.x++;
+					d += 1 - k;
 				}
-				d =0.5-k;
-				for (p = P0; p.x < P1.x; p.x++)
-				{
-					pDC->SetPixelV(Round(p.x), Round(p.y), clr);
-					if (d<0)
-					{
-						p.y++;
-						d+=1-k;
-					}
-					else
-						d-=k;
-				}
+				else
+					d += 1;
+			}
+		}
+
+		                                                 // 0<=k<=1
+
+		if (k >= 0 && k <= 1)
+		{
+			if (P0.x > P1.x)
+			{
+				p = P0; P0 = P1; P1 = p;
+
 			}
 
-			if (k>=-1.0&&k<0.0)                    //Áîª-1<=k<0.0ÁöÑÁõ¥Á∫ø
+			d = 0.5 - k;
+			for (p = P0; p.x < P1.x; p.x++)
 			{
-				if (P0.x > P1.x)
-				{
-					t = P0; P0 = P1; P1 = t;
-				}
-				d = -0.5 - k;
-				for (p = P0; p.x < P1.x; p.x++)
-				{
-					pDC->SetPixelV(Round(p.x), Round(p.y), clr);
-					if (d>0)
-					{
-						p.y--;
-						d -= 1 + k;
-					}
-					else
-						d -= k;
-				}
-			}
+				t = sqrt((p.x - P0.x)*(p.x - P0.x) + (p.y - P0.y)*(p.y - P0.y));
+				clr = RGB(R0*(1 - t / len) + R1*t / len, G0*(1 - t / len) + G1*t / len, B0*(1 - t / len) + B1*t / len);
+				pDC->SetPixelV(Round(p.x), Round(p.y), clr);
 
-			if (k<-1.0)                         //ÁîªÊñúÁéák<-1.0ÁöÑÁõ¥Á∫ø
-			{
-				if (P0.y < P1.y)
+				if (d < 0)
 				{
-					t = P0; P0 = P1; P1 = t;
+					p.y++;
+					d += 1 - k;
 				}
-				d = -1-0.5*k;
-				for (p = P0; p.y > P1.y; p.y--)
-				{
-					pDC->SetPixelV(Round(p.x), Round(p.y), clr);
-					if (d<0)
-					{
-						p.x++;
-						d -= 1 + k;
-					}
-					else
-						d -= 1;
-				}
+				else
+					d -= k;
 			}
-		 }
-		 P0 = p1;
+		}
+
+		                                            //k>1
+		if (k > 1.0)
+		{
+			if (P0.y > P1.y)
+			{
+				p = P0; P0 = P1; P1 = p;
+			}
+			d = 1 - 0.5*k;
+			for (p = P0; p.y < P1.y; p.y++)
+			{
+				t = sqrt((p.x - P0.x)*(p.x - P0.x) + (p.y - P0.y)*(p.y - P0.y));
+				clr = RGB(R0*(1 - t / len) + R1*t / len, G0*(1 - t / len) + G1*t / len, B0*(1 - t / len) + B1*t / len);
+				pDC->SetPixelV(Round(p.x), Round(p.y), clr);
+
+				if (d >= 0)
+				{
+					p.x++;
+					d += 1 - k;
+				}
+				else
+					d += 1;
+			}
+		}
+
+		                                          //0>k>=-1
+		if (k >= -1.0&&k < 0.0)
+		{
+			if (P0.x > P1.x)
+			{
+				p = P0; P0 = P1; P1 = p;
+			}
+			d = -0.5 - k;
+			for (p = P0; p.x < P1.x; p.x++)
+			{
+				t = sqrt((p.x - P0.x)*(p.x - P0.x) + (p.y - P0.y)*(p.y - P0.y));
+				clr = RGB(R0*(1 - t / len) + R1*t / len, G0*(1 - t / len) + G1*t / len, B0*(1 - t / len) + B1*t / len);
+				pDC->SetPixelV(Round(p.x), Round(p.y), clr);
+				if (d > 0)
+				{
+					p.y--;
+					d -= 1 + k;
+				}
+				else
+					d -= k;
+			}
+		}
+		                                    //k<-1.0
+		if (k < -1.0)
+		{
+			if (P0.y < P1.y)
+			{
+				p = P0; P0 = P1; P1 = p;
+			}
+			d = -1 - 0.5*k;
+			for (p = P0; p.y > P1.y; p.y--)
+			{
+				t = sqrt((p.x - P0.x)*(p.x - P0.x) + (p.y - P0.y)*(p.y - P0.y));
+				clr = RGB(R0*(1 - t / len) + R1*t / len, G0*(1 - t / len) + G1*t / len, B0*(1 - t / len) + B1*t / len);
+				pDC->SetPixelV(Round(p.x), Round(p.y), clr);
+				if (d < 0)
+				{
+					p.x++;
+					d -= 1 + k;
+				}
+				else
+					d -= 1;
+			}
+		}
+	}
 
 	CView::OnLButtonUp(nFlags, point);
 }
